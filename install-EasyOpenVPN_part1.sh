@@ -25,8 +25,12 @@ MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 
   # 64-bit stuff here
-wget http://download.fedora.redhat.com/pub/epel/5/x86_64/pkcs11-helper-devel-1.07-2.el5.1.x86_64.rpm
-wget http://download.fedora.redhat.com/pub/epel/5/x86_64/pkcs11-helper-1.07-2.el5.1.x86_64.rpm
+#wget http://download.fedora.redhat.com/pub/epel/5/x86_64/pkcs11-helper-devel-1.07-2.el5.1.x86_64.rpm
+#wget http://download.fedora.redhat.com/pub/epel/5/x86_64/pkcs11-helper-1.07-2.el5.1.x86_64.rpm
+
+wget http://dl.fedoraproject.org/pub/epel/5/x86_64/pkcs11-helper-1.07-2.el5.1.x86_64.rpm
+wget http://dl.fedoraproject.org/pub/epel/5/x86_64/pkcs11-helper-devel-1.07-2.el5.1.x86_64.rpm
+
 rpm -ivh /root/EasyOpenVPN/pkcs11-helper-1.07-2.el5.1.x86_64.rpm
 rpm -ivh /root/EasyOpenVPN/pkcs11-helper-devel-1.07-2.el5.1.x86_64.rpm
 rpmbuild --rebuild /root/EasyOpenVPN/lzo-1.08-4.rf.src.rpm
@@ -37,8 +41,12 @@ else
 
 
   # 32-bit stuff here
-wget http://download.fedora.redhat.com/pub/epel/6/i386/pkcs11-helper-1.07-5.el6.i686.rpm
-wget http://download.fedora.redhat.com/pub/epel/6/i386/pkcs11-helper-devel-1.07-5.el6.i686.rpm
+#wget http://download.fedora.redhat.com/pub/epel/6/i386/pkcs11-helper-1.07-5.el6.i686.rpm
+#wget http://download.fedora.redhat.com/pub/epel/6/i386/pkcs11-helper-devel-1.07-5.el6.i686.rpm
+
+wget http://dl.fedoraproject.org/pub/epel/6/i386/pkcs11-helper-1.07-5.el6.i686.rpm
+wget http://dl.fedoraproject.org/pub/epel/6/i386/pkcs11-helper-devel-1.07-5.el6.i686.rpm
+
 rpm -ivh /root/EasyOpenVPN/pkcs11-helper-*.rpm
 rpmbuild --rebuild /root/EasyOpenVPN/lzo-1.08-4.rf.src.rpm
 rpm -ivh /root/rpmbuild/RPMS/i686/lzo-*.rpm
